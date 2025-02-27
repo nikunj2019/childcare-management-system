@@ -1,7 +1,7 @@
-import UploadForm from "../components/UploadForm";
-import EnrollmentList from "../components/EnrollmentList";
-import Predictions from "../components/Predictions";
-import Card from "../components/Card";
+import UploadForm from "../components/UploadForm.js";
+import EnrollmentList from "../components/EnrollmentList.js";
+import Predictions from "../components/Predictions.js";
+import Card from "../components/Card.js";
 
 export default function Home() {
   return (
