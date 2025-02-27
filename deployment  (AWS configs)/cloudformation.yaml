@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  S3Bucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: "childcare-data-bucket"
+
+  ChildcareDatabase:
+    Type: "AWS::RDS::DBInstance"
+    Properties:
+      Engine: "postgres"
+      DBInstanceClass: "db.t3.micro"
+      AllocatedStorage: 20
+      MasterUsername: "admin"
+      MasterUserPassword: "password"
+
+  ChildcareAPI:
+    Type: "AWS::Lambda::Function"
+    Properties:
+      FunctionName: "childcare-api"
+      Handler: "main.handler"
+      Runtime: "python3.9"
+      Code:
+        S3Bucket: "childcare-deploy-bucket"
+        S3Key: "backend/function.zip"
