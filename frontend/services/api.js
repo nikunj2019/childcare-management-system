@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://3.22.233.33:8000";
+const API_URL = "https://3.22.233.33:8000";
 
 export const uploadFile = async (file) => {
   const formData = new FormData();
