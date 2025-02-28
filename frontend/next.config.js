@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // 🔥 Forces static export
+  output: "export", // 🔥 This replaces "next export"
   reactStrictMode: true,
   images: {
     unoptimized: true, // Required for AWS Amplify if using images
