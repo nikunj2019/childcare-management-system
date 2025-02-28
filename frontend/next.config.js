@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
-    reactStrictMode: true,
-  };  
+const nextConfig = {
+  output: "export", // 🔥 Forces static export
+  reactStrictMode: true,
+  images: {
+    unoptimized: true, // Required for AWS Amplify if using images
+  },
+};
+
+module.exports = nextConfig;
